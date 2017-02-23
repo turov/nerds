@@ -1,0 +1,63 @@
+.wrap {
+    width: 1200px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navigation-list {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-header .wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation-list {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    justify-content: space-between;
+}
+
+
+.main-navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+.promo .wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.promo-slider-first {
+    background-image: url("../img/slide1.png");
+    background-repeat: no-repeat;
+}
+
+.features .wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.index-info .wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.partners-logos-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1200px;
+}
