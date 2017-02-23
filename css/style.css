@@ -61,3 +61,49 @@ a {
     justify-content: space-between;
     width: 1200px;
 }
+
+.main-footer .wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+/* catalog */
+
+.content-inner .wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.sort {
+    display: flex;
+    flex-direction: row;
+}
+
+.sort ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    width: 760px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item-description {
+    display: none;
+}
+
+.pagination-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 460px;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
