@@ -71,6 +71,13 @@ a {
     justify-content: space-between;
 }
 
+.index-container {
+    width: 360px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .partners-logos-list {
     list-style: none;
     display: flex;
@@ -273,6 +280,26 @@ a {
     line-height: 24px;
     font-size: 16px;
     font-weight: 400;
+}
+
+.stat-title {
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.stat-percent {
+    line-height: 45px;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.stat-description {
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #444444;
 }
 
 .footer-info h3 {
