@@ -17,7 +17,7 @@
             <ul class="navigation-list">
                 <li class="navigation-item"><a href="#">Студия</a></li>
                 <li class="navigation-item"><a href="#">Клиенты</a></li>
-                <li class="navigation-item"><a href="#">Магазин</a></li>
+                <li class="navigation-item"><a href="catalog.html">Магазин</a></li>
                 <li class="navigation-item"><a href="#">Контакты</a></li>
             </ul>
             <a href="#" class="basket">Корзина</a>
@@ -27,12 +27,42 @@
 
 <div class="promo">
     <div class="wrap">
-        <div class="slide">
-            <div class="slide-title">Дорого, долго, скурпулезно.</div>
-            <p>Математически выверенный дизайн<br>
-                для вашего сайта или мобильного приложения.
-            </p>
-            <a href="#" class="btn promo-info-btn">Узнать больше</a>
+
+        <div class="slider">
+            <input type="radio" id="btn-1" name="toggle" checked>
+            <input type="radio" id="btn-2" name="toggle">
+            <input type="radio" id="btn-3" name="toggle">
+            <div class="slider-controls">
+                <label for="btn-1"></label>
+                <label for="btn-2"></label>
+                <label for="btn-3"></label>
+            </div>
+            <div class="slides">
+                <div class="slide">
+                    <div class="slide-text">
+                        <div class="slide-title">Долго, дорого, скрупулезно</div>
+                        <p>Математически выверенный дизайн<br>
+                            для вашего сайта или мобильного приложения.</p>
+                        <a class="btn" href="#">Узнать больше</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-text">
+                        <div class="slide-title">Дорого, скрупулезно</div>
+                        <p>Математически выверенный дизайн<br>
+                            для вашего сайта или мобильного приложения.</p>
+                        <a class="btn" href="#">Узнать больше</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-text">
+                        <div class="slide-title">Скрупулезно</div>
+                        <p>Математически выверенный дизайн<br>
+                            для вашего сайта или мобильного приложения.</p>
+                        <a class="btn" href="#">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -102,18 +132,18 @@
             <div class="index-info-stat">
                 <span class="stat-title">С 2004 года любим точность во всем:</span>
                 <div class="index-container">
-                <div class="stat-left">
-                    <span class="stat-percent">146%</span>
-                    <span class="stat-description">Уровень самоотдачи</span>
-                </div>
-                <div class="stat-center">
-                    <span class="stat-percent">100%</span>
-                    <span class="stat-description">Соблюдение сроков</span>
-                </div>
-                <div class="stat-right">
-                    <span class="stat-percent">50%</span>
-                    <span class="stat-description">Минимальная предоплата</span>
-                </div>
+                    <div class="stat-left">
+                        <span class="stat-percent">146%</span>
+                        <span class="stat-description">Уровень самоотдачи</span>
+                    </div>
+                    <div class="stat-center">
+                        <span class="stat-percent">100%</span>
+                        <span class="stat-description">Соблюдение сроков</span>
+                    </div>
+                    <div class="stat-right">
+                        <span class="stat-percent">50%</span>
+                        <span class="stat-description">Минимальная предоплата</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -133,7 +163,6 @@
 
 
 <div class="map">
-    <img src="img/map.jpg" width="1440" height="416" alt="карта">
     <div class="map-address"></div>
 </div>
 

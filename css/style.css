@@ -11,8 +11,10 @@
 }
 
 body {
+    width: 1440px;
     font-family: "Roboto", Arial, sans-serif;
 }
+
 
 .wrap {
     width: 1200px;
@@ -54,10 +56,111 @@ a {
     justify-content: space-between;
 }
 
-.promo-slider-first {
+.slider{
+    position:relative;
+    width:1200px;
+    height: 423px;
+    margin:0 auto;
+}
+.slider input[type=radio] {
+    position:absolute;
+    opacity:0;
+}
+.slider-controls{
+    position:absolute;
+    bottom:95px;
+    left:50%;
+    width:200px;
+    height:10px;
+    margin-left:-100px;
+    text-align:center;
+    z-index:1000;
+}
+.slider-controls label{
+    display:inline-block;
+    width:4px;
+    height:4px;
+    margin:0 3px;
+    background:white;
+    border:3px solid white;
+    vertical-align:top;
+    border-radius:50%;
+    cursor:pointer;
+}
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+    background:#c1c1c1;
+}
+.slide{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+.slide-text{
+    width:380px;
+    padding:30px 0;
+    color:#283136;
+}
+.slide-title{
+    font-size:36px;
+    line-height:1;
+    font-weight:bold;
+    color:black;
+}
+
+.slide .btn{
+    display:block;
+    width:240px;
+    padding:10px 0;
+    margin-top:25px;
+    font-size:12px;
+    color:white;
+    text-transform:uppercase;
+    text-align:center;
+    text-decoration:none;
+    background:#fb565a;
+    border-radius:3px;
+}
+.slide:nth-child(1) {
     background-image: url("../img/slide1.png");
     background-repeat: no-repeat;
+    background-position: 100% 10px;
+    padding-bottom: 100px;
+    width: 100%;
 }
+
+.slide:nth-child(2){
+    background-image: url("../img/slide2.png");
+    background-repeat:no-repeat;
+    background-position:100% 10px;
+    padding-bottom: 100px;
+    width: 100%;
+}
+.slide:nth-child(3){
+    background-image: url("../img/slide3.png");
+    background-repeat:no-repeat;
+    background-position:100% 0;
+    padding-bottom: 100px;
+    width: 100%;
+}
+.slide{
+    display:none;
+}
+#btn-1:checked ~ .slides .slide:nth-child(1) {
+    display: block;
+}
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+    display: block;
+}
+#btn-3:checked ~ .slides .slide:nth-child(3) {
+    display: block;
+}
+
+
 
 .features .wrap {
     display: flex;
@@ -98,6 +201,27 @@ a {
     margin: 0;
     padding: 0;
     border-bottom: solid #eeeeee 2px;
+    width: 1160px;
+}
+
+.partners-logos-list li {
+    position: relative;
+}
+
+.partners-logos-list li::before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 265px;
+    width: 2px;
+    height: 52px;
+    background: #eeeeee;
+}
+
+.partners-logos-list li:last-child::before{
+    position: absolute;
+    content: "";
+    background: none;
 }
 
 .partner-logo {
@@ -111,20 +235,102 @@ a {
 
 .map {
     overflow: hidden;
+    background-image: url("../img/map.jpg");
+    width: 1440px;
+    height: 416px;
 }
 
-.map img {
-    display: block;
-     width: 1440px;
-    height: 416px;
-    margin: 0 auto;
+.social-btn {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background: #e1e1e1;
 }
+
 
 /* catalog */
 
 .content-inner .wrap {
     display: flex;
     flex-direction: row;
+}
+
+.range-filter {
+    width: 240px;
+}
+
+.range-controls {
+    position: relative;
+    height: 41px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background: #f1f1f1;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background: #d7dcde;
+}
+
+.range-controls .bar {
+    width: 70%;
+    height: 2px;
+    background: #00ca74;
+}
+
+.range-controls .toggle {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 4px;
+    height: 4px;
+    cursor: pointer;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    background: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.range-controls .toggle-min {
+    left: 50px;
+}
+
+.range-controls .toggle-max {
+    left: 110px;
+}
+
+.price-controls {
+    font-size: 0;
+}
+
+.price-controls label {
+    font-size: 16px;
+    display: inline-block;
+    width: 50%;
+}
+
+.max-price {
+    text-align: right;
+}
+
+.price-controls input {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 16px;
+    width: 60px;
+    margin-left: 10px;
+    padding: 8px 10px;
+    text-align: center;
+    color: #283136;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
 }
 
 .sort {
@@ -136,6 +342,56 @@ a {
     list-style: none;
     display: flex;
     flex-direction: row;
+}
+
+.sort-btn {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+}
+
+.sort-btn a {
+    display: block;
+}
+
+.sort-btn-up {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 5px 0 5px;
+    border-color: #cccccc transparent transparent transparent;
+}
+
+.sort-btn-down {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 10px 5px;
+    border-color: transparent transparent #cccccc transparent;
+}
+
+.sort-btn-up:hover {
+    border-color: #999999 transparent transparent transparent;
+}
+
+.sort-btn-down:hover {
+    border-color: transparent transparent #999999 transparent;
+}
+
+.sort-btn-up:active {
+    border-color: #000000 transparent transparent transparent;
+}
+
+.sort-btn-down:active {
+    border-color: transparent transparent #000000 transparent;
+}
+
+.sort-btn-down.sort-btn-active {
+    border-color: transparent transparent #000000 transparent;
+}
+
+.sort-btn-up.sort-btn-active {
+    border-color: #000000 transparent transparent transparent;
 }
 
 .items {
@@ -161,10 +417,6 @@ a {
 }
 
 /*оформление*/
-
-.wrap {
-    margin: 0 140px;
-}
 
 .main-header {
     background-color: #eeeeee;
@@ -198,13 +450,6 @@ a {
     padding-top: 50px;
 }
 
-.slide {
-    background-image: url("../img/slide1.png");
-    background-repeat: no-repeat;
-    background-position: 320px 0;
-    padding-bottom: 100px;
-    width: 100%;
-}
 
 .slide-title {
     font-size: 55px;
