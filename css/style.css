@@ -63,12 +63,14 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-bottom: solid #eeeeee 2px;
 }
 
 .index-info .wrap {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-bottom: solid #eeeeee 2px;
 }
 
 .index-container {
@@ -78,6 +80,16 @@ a {
     justify-content: space-between;
 }
 
+.index-info-stat::before {
+    content: "";
+    display: block;
+    background-image: url("../img/nerds-illustration.jpg");
+    background-repeat: no-repeat;
+    width: 360px;
+    height: 208px;
+
+}
+
 .partners-logos-list {
     list-style: none;
     display: flex;
@@ -85,6 +97,11 @@ a {
     justify-content: space-between;
     margin: 0;
     padding: 0;
+    border-bottom: solid #eeeeee 2px;
+}
+
+.partner-logo {
+    opacity: 0.2;
 }
 
 .main-footer .wrap {
@@ -263,6 +280,26 @@ a {
     line-height: 24px;
     font-size: 16px;
     font-weight: 400;
+}
+
+.index-info-description ul {
+    padding: 0;
+    margin: 0;
+}
+
+.index-info-description li {
+    padding-left: 40px;
+    position: relative;
+}
+
+.index-info-description li::before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background: #fb565a;
 }
 
 .index-info-title {
