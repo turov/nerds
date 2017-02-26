@@ -227,6 +227,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
     border-bottom: solid #eeeeee 2px;
+    padding-bottom: 46px;
 }
 
 .index-container {
@@ -250,22 +251,43 @@ a {
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
     border-bottom: solid #eeeeee 2px;
     width: 1160px;
+    padding-bottom: 39px;
+
 }
 
 .partners-logos-list li {
     position: relative;
 }
 
-.partners-logos-list li::before {
+.partners-logos-list li:first-child::before {
     position: absolute;
     content: "";
-    top: 10px;
-    left: 265px;
+    top: 26px;
+    left: 279px;
+    width: 2px;
+    height: 52px;
+    background: #eeeeee;
+}
+
+.partners-logos-list li:nth-child(2)::before {
+    position: absolute;
+    content: "";
+    top: 26px;
+    left: 349px;
+    width: 2px;
+    height: 52px;
+    background: #eeeeee;
+}
+
+.partners-logos-list li:nth-child(3)::before {
+    position: absolute;
+    content: "";
+    top: 26px;
+    left: 319px;
     width: 2px;
     height: 52px;
     background: #eeeeee;
@@ -290,9 +312,35 @@ a {
 }
 
 .partners-logos .wrap {
-    margin-bottom: 100px;
+    margin-bottom: 33px;
     border-bottom: none;
 }
+
+
+.logo-one {
+    padding-top: 24px;
+    padding-left: 31px;
+}
+
+.logo-two {
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-left: 96px;
+
+}
+
+.logo-three {
+    padding-right: 69px;
+    padding-top: 28px;
+    padding-left: 78px;
+}
+
+.logo-four {
+    padding-top: 14px;
+    padding-left: 52px;
+    padding-right: 30px;
+}
+
 
 .main-footer .wrap {
     display: flex;
@@ -306,6 +354,11 @@ a {
     height: 416px;
 }
 
+.main-footer {
+    margin-top: 67px;
+    padding-bottom: 35px;
+}
+
 .social-btn {
     position: relative;
     display: inline-block;
@@ -316,6 +369,7 @@ a {
     width: 80px;
     height: 80px;
     background: #e1e1e1;
+    margin-right: 6px;
 }
 
 .social-btn:hover {
@@ -1070,6 +1124,9 @@ sup {
     line-height: 36px;
     font-size: 36px;
     font-weight: 500;
+    margin: 0;
+    margin-top: 8px;
+    margin-left: 133px;
 }
 
 .footer-info p {
@@ -1077,4 +1134,6 @@ sup {
     font-size: 16px;
     font-weight: 400;
     color: #444444;
+    margin-top: 10px;
+    margin-left: 134px;
 }
