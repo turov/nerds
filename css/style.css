@@ -653,11 +653,12 @@ input[type="checkbox"] {
 
 input[type="checkbox"] + label {
     display: block;
-    margin: 10px 0;
+    margin: 15px 0;
     line-height: 20px;
-    padding-left: 42px;
+    padding-left: 36px;
     position: relative;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 input[type="checkbox"] + label::before {
@@ -703,8 +704,8 @@ input[type="checkbox"]:checked + label:hover::before {
 .filters-group-btn {
     display: block;
     width: 260px;
-    padding: 10px 0;
-    margin-top: 25px;
+    padding: 17px 0;
+    margin-top: 29px;
     color: #000000;
     text-transform: uppercase;
     text-align: center;
@@ -733,10 +734,41 @@ input[type="checkbox"]:checked + label:hover::before {
     flex-direction: row;
 }
 
+.sort-info {
+    display: block;
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-top: 3px;
+}
+
 .sort ul {
     list-style: none;
     display: flex;
     flex-direction: row;
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-left: 226px;
+    margin-top: 4px
+}
+
+.sort-list .sort-item {
+    width: 86px;
+}
+
+.sort-item a {
+    display: block;
+    color: #000000;
+}
+
+.sort-item a:last-child{
+    width: 102px;
 }
 
 .sort-btn {
@@ -749,12 +781,18 @@ input[type="checkbox"]:checked + label:hover::before {
     display: block;
 }
 
+.sort .sort-list-direct {
+    margin-left: 24px;
+    margin-top: 9px;
+}
+
 .sort-btn-up {
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 10px 5px 0 5px;
     border-color: #cccccc transparent transparent transparent;
+    margin-right: 18px;
 }
 
 .sort-btn-down {
@@ -795,15 +833,72 @@ input[type="checkbox"]:checked + label:hover::before {
     width: 760px;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 56px;
 }
 
 .item {
-    border-top: 30px solid #f1f1f1;
+    position: relative;
+    border-top: 40px solid #f1f1f1;
     border-radius: 3px;
+    margin-bottom: 32px;
+}
+
+.item:hover {
+    cursor: pointer;
+    border-color: #4d4d4d;
+}
+
+.item::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 25px;
+    top: -27px;
+    left: 16px;
+    background: #fb565a;
+}
+
+.item::after {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 25px;
+    top: -27px;
+    left: 40px;
+    background: #efc84a;
+}
+
+.item-img {
+    position: relative;
+}
+
+.item-img::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 25px;
+    top: -27px;
+    left: 63px;
+    background: #00ca74;
 }
 
 .item-description {
     display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background: #fff;
+    z-index: 10;
+}
+
+item:hover .item-description {
+    display: block
 }
 
 .pagination-list {
@@ -814,12 +909,12 @@ input[type="checkbox"]:checked + label:hover::before {
     justify-content: space-between;
     padding: 0;
     margin: 0;
+    margin-bottom: 61px;
 }
 
 .pagination-item {
     display: block;
     width: 50px;
-    padding: 10px 0;
     margin-top: 25px;
     color: #000000;
     text-transform: uppercase;
@@ -832,6 +927,9 @@ input[type="checkbox"]:checked + label:hover::before {
     background: #eeeeee;
     border-radius: 3px;
     cursor: pointer;
+    margin-right: 11px;
+    padding-top: 19px;
+    padding-bottom: 14px;
 }
 
 .pagination-item a {
@@ -850,7 +948,9 @@ input[type="checkbox"]:checked + label:hover::before {
 }
 
 .pagination-item-next {
-    width: 260px;
+    width: 255px;
+    padding-right: 6px;
+    margin-right: 16px;
 }
 
 .pagination-item-active {
