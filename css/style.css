@@ -15,9 +15,8 @@ body {
     font-family: "Roboto", Arial, sans-serif;
 }
 
-
 .wrap {
-    width: 1200px;
+    width: 1160px;
     margin: 0 auto;
 }
 
@@ -44,10 +43,38 @@ a {
     justify-content: space-between;
 }
 
-
 .main-navigation {
     display: flex;
     flex-direction: row;
+}
+
+.navigation-active span {
+    color: #000000;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 500;
+    position: relative;
+    display: block;
+    padding: 25px 20px;
+    padding-top: 0;
+}
+
+.navigation-active span::before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    left: 20px;
+    height: 5px;
+    background-color: #fb565a;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logo:active {
+    opacity: 0.3;
 }
 
 .promo .wrap {
@@ -56,75 +83,94 @@ a {
     justify-content: space-between;
 }
 
-.slider{
-    position:relative;
-    width:1200px;
+.slider {
+    position: relative;
+    width: 1200px;
     height: 423px;
-    margin:0 auto;
+    margin: 0 auto;
 }
+
 .slider input[type=radio] {
-    position:absolute;
-    opacity:0;
+    position: absolute;
+    opacity: 0;
 }
-.slider-controls{
-    position:absolute;
-    bottom:95px;
-    left:50%;
-    width:200px;
-    height:10px;
-    margin-left:-100px;
-    text-align:center;
-    z-index:1000;
+
+.slider-controls {
+    position: absolute;
+    bottom: 95px;
+    left: 50%;
+    width: 200px;
+    height: 10px;
+    margin-left: -100px;
+    text-align: center;
+    z-index: 1000;
 }
-.slider-controls label{
-    display:inline-block;
-    width:4px;
-    height:4px;
-    margin:0 3px;
-    background:white;
-    border:3px solid white;
-    vertical-align:top;
-    border-radius:50%;
-    cursor:pointer;
+
+.slider-controls label {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    margin: 0 3px;
+    background: white;
+    border: 3px solid white;
+    vertical-align: top;
+    border-radius: 50%;
+    cursor: pointer;
 }
+
 #btn-1:checked ~ .slider-controls label[for="btn-1"],
 #btn-2:checked ~ .slider-controls label[for="btn-2"],
 #btn-3:checked ~ .slider-controls label[for="btn-3"] {
-    background:#c1c1c1;
-}
-.slide{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    overflow:hidden;
-}
-.slide-text{
-    width:380px;
-    padding:30px 0;
-    color:#283136;
-}
-.slide-title{
-    font-size:36px;
-    line-height:1;
-    font-weight:bold;
-    color:black;
+    background: #c1c1c1;
 }
 
-.slide .btn{
-    display:block;
-    width:240px;
-    padding:10px 0;
-    margin-top:25px;
-    font-size:12px;
-    color:white;
-    text-transform:uppercase;
-    text-align:center;
-    text-decoration:none;
-    background:#fb565a;
-    border-radius:3px;
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
+
+.slide-text {
+    width: 380px;
+    padding: 30px 0;
+    color: #283136;
+}
+
+.slide-title {
+    font-size: 36px;
+    line-height: 1;
+    font-weight: bold;
+    color: black;
+}
+
+.slide .btn {
+    display: block;
+    width: 240px;
+    padding: 10px 0;
+    margin-top: 25px;
+    font-size: 12px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    background: #fb565a;
+    border-radius: 3px;
+}
+
+.slide .btn:hover {
+    background: #e74246;
+}
+
+/* проблема */
+
+.slide .btn:active {
+    background: #d7373b;
+    box-shadow: inset 0 3px 0 -1px #c13135;
+}
+
 .slide:nth-child(1) {
     background-image: url("../img/slide1.png");
     background-repeat: no-repeat;
@@ -133,34 +179,37 @@ a {
     width: 100%;
 }
 
-.slide:nth-child(2){
+.slide:nth-child(2) {
     background-image: url("../img/slide2.png");
-    background-repeat:no-repeat;
-    background-position:100% 10px;
+    background-repeat: no-repeat;
+    background-position: 100% 10px;
     padding-bottom: 100px;
     width: 100%;
 }
-.slide:nth-child(3){
+
+.slide:nth-child(3) {
     background-image: url("../img/slide3.png");
-    background-repeat:no-repeat;
-    background-position:100% 0;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
     padding-bottom: 100px;
     width: 100%;
 }
-.slide{
-    display:none;
+
+.slide {
+    display: none;
 }
+
 #btn-1:checked ~ .slides .slide:nth-child(1) {
     display: block;
 }
+
 #btn-2:checked ~ .slides .slide:nth-child(2) {
     display: block;
 }
+
 #btn-3:checked ~ .slides .slide:nth-child(3) {
     display: block;
 }
-
-
 
 .features .wrap {
     display: flex;
@@ -218,7 +267,7 @@ a {
     background: #eeeeee;
 }
 
-.partners-logos-list li:last-child::before{
+.partners-logos-list li:last-child::before {
     position: absolute;
     content: "";
     background: none;
@@ -226,6 +275,14 @@ a {
 
 .partner-logo {
     opacity: 0.2;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+}
+
+.partner-logo:active {
+    opacity: 0.1;
 }
 
 .main-footer .wrap {
@@ -250,6 +307,14 @@ a {
     width: 80px;
     height: 80px;
     background: #e1e1e1;
+}
+
+.social-btn:hover {
+    background: #e74246;
+}
+
+.social-btn:active {
+    background: #d7373b;
 }
 
 .social-btn::before {
@@ -280,7 +345,27 @@ a {
     background-position: 0 -295px;
 }
 
+.social-btn-vk:active::before,
+.social-btn-fb:active::before,
+.social-btn-inst:active::before {
+    opacity: 0.3;
+}
+
 /* catalog */
+
+.promo-inner {
+    background: #eeeeee;
+    padding-top: 15px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.promo-inner h1 {
+    line-height: 55px;
+    font-size: 55px;
+    color: #000000;
+    font-weight: 500;
+}
 
 .content-inner .wrap {
     display: flex;
@@ -288,7 +373,7 @@ a {
 }
 
 .range-filter {
-    width: 240px;
+    width: 260px;
 }
 
 .range-controls {
@@ -377,8 +462,6 @@ a {
     font-weight: 500;
     color: #000000;
 }
-
-
 
 input[type="radio"] {
     display: none;
@@ -471,7 +554,6 @@ input[type="radio"]:checked + label:hover::after {
     left: 7px;
 }
 
-
 input[type="checkbox"] {
     display: none;
 }
@@ -518,6 +600,39 @@ input[type="checkbox"] + label:hover::before {
 input[type="checkbox"]:checked + label:hover::before {
     width: 27px;
     background-position: 0 -220px;
+}
+
+.filters .filters-group-btn {
+    border: none;
+    cursor: pointer;
+}
+
+.filters-group-btn {
+    display: block;
+    width: 260px;
+    padding: 10px 0;
+    margin-top: 25px;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Roboto", Arial, sans-serif;
+    background: #eeeeee;
+    border-radius: 3px;
+}
+
+.filters-group-btn:hover {
+    background: #dfdfdf;
+}
+
+/* проблема */
+
+.filters-group-btn:active {
+    background: #d5d5d5;
+    box-shadow: inset 0 3px 0 -1px #bfbfbf;
 }
 
 .sort {
@@ -608,6 +723,58 @@ input[type="checkbox"]:checked + label:hover::before {
     margin: 0;
 }
 
+.pagination-item {
+    display: block;
+    width: 50px;
+    padding: 10px 0;
+    margin-top: 25px;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Roboto", Arial, sans-serif;
+    background: #eeeeee;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.pagination-item a {
+    color: #000000;
+}
+
+.pagination-item:hover {
+    background: #dfdfdf;
+}
+
+/* проблема */
+
+.pagination-item:active {
+    background: #d5d5d5;
+    box-shadow: inset 0 3px 0 -1px #bfbfbf;
+}
+
+.pagination-item-next {
+    width: 260px;
+}
+
+.pagination-item-active {
+    background: transparent;
+    box-shadow: inset 0 0 0 3px #bfbfbf;
+}
+
+.pagination-item-active:hover {
+    background: transparent;
+    box-shadow: inset 0 0 0 3px #bfbfbf;
+}
+
+.pagination-item-active:active {
+    background: transparent;
+    box-shadow: inset 0 0 0 3px #bfbfbf;
+}
+
 /*оформление*/
 
 .main-header {
@@ -626,6 +793,15 @@ input[type="checkbox"]:checked + label:hover::before {
     font-weight: 500;
 }
 
+.navigation-item a:hover {
+    color: #fb565a;
+}
+
+.navigation-item a:active {
+    color: #000000;
+    opacity: 0.3;
+}
+
 .cart {
     position: relative;
     display: inline-block;
@@ -638,7 +814,7 @@ input[type="checkbox"]:checked + label:hover::before {
     padding-top: 25px;
 }
 
-.cart::before{
+.cart::before {
     content: "";
     position: absolute;
     top: 33px;
@@ -647,26 +823,41 @@ input[type="checkbox"]:checked + label:hover::before {
     height: 15px;
     background: url(../img/sprite-nerds.png) no-repeat;
     background-position: 0 0;
+    opacity: 1;
 }
 
+.cart:hover {
+    color: #fb565a;
+}
+
+.cart:active {
+    color: #000000;
+    opacity: 0.3;
+}
+
+/* проблемка */
+
+.cart:active::before {
+    opacity: 1;
+}
 
 .promo {
-   background-color: #eeeeee;
+    background-color: #eeeeee;
     padding-top: 50px;
 }
-
 
 .slide-title {
     font-size: 55px;
     line-height: 55px;
     font-weight: 500;
-    width: 380px;
+    width: 520px;
 }
 
 .slide p {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
+    width: 410px;
 }
 
 .features-description {
@@ -714,6 +905,61 @@ input[type="checkbox"]:checked + label:hover::before {
     background-repeat: no-repeat;
     width: 300px;
     height: 146px;
+}
+
+.features-description .btn {
+    display: block;
+    width: 160px;
+    padding: 10px 0;
+    margin-top: 25px;
+    font-size: 12px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    background: #fb565a;
+    border-radius: 3px;
+}
+
+.features-description .btn:hover {
+    background: #e74246;
+}
+
+/* проблема */
+
+.features-description .btn:active {
+    background: #d7373b;
+    box-shadow: inset 0 3px 0 -1px #c13135;
+}
+
+.features-description .features-center-btn {
+    background: #00ca74;
+}
+
+.features-description .features-center-btn:hover {
+    background: #00bc6c;
+}
+
+/* проблема */
+
+.features-description .features-center-btn:active {
+    background: #00aa62;
+    box-shadow: inset 0 3px 0 -1px #009958;
+}
+
+.features-description .features-right-btn {
+    background: #efc84a;
+}
+
+.features-description .features-right-btn:hover {
+    background: #eab534;
+}
+
+/* проблема */
+
+.features-description .features-right-btn:active {
+    background: #e5a722;
+    box-shadow: inset 0 3px 0 -1px #ce961f;
 }
 
 .index-info-description {
