@@ -52,9 +52,10 @@ a {
     font-size: 16px;
     line-height: 30px;
     font-weight: 500;
+    text-transform: uppercase;
     position: relative;
     display: block;
-    padding: 25px 20px;
+    padding: 25px 0px;
     padding-top: 0;
 }
 
@@ -62,9 +63,10 @@ a {
     content: "";
     position: absolute;
     right: 20px;
-    bottom: 0;
-    left: 20px;
-    height: 5px;
+    bottom: 20px;
+    left: 0px;
+    height: 2px;
+    width: 74px;
     background-color: #fb565a;
 }
 
@@ -428,6 +430,12 @@ a {
     font-size: 55px;
     color: #000000;
     font-weight: 500;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.content-inner {
+    margin-top: 56px;
 }
 
 .content-inner .wrap {
@@ -435,8 +443,21 @@ a {
     flex-direction: row;
 }
 
+.left-column {
+    margin-right: 140px;
+}
+
+.form-title {
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
 .range-filter {
     width: 260px;
+    margin-top: 48px;
 }
 
 .range-controls {
@@ -520,9 +541,11 @@ a {
 }
 
 .content-inner legend {
+    font-family: "Roboto", Arial, sans-serif;
     line-height: 30px;
     font-size: 18px;
     font-weight: 500;
+    text-transform: uppercase;
     color: #000000;
 }
 
