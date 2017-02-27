@@ -440,7 +440,9 @@ a {
     box-shadow: inset 0 3px 0 -1px #c13135;
 }
 
-.popup {
+/* Всплывающая форма */
+
+.modal-content {
     position: absolute;
     content: "";
     top: -140px;
@@ -465,6 +467,7 @@ a {
     font-weight: 500;
     color: black;
     margin-top: 80px;
+    margin-bottom: 40px;
 }
 
 .name,
@@ -479,21 +482,133 @@ a {
 
 .name label {
     display: block;
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
 }
 
 .name input {
     display: block;
-    width: 340px;
+    box-sizing: border-box;
+    width: 360px;
+    border: 2px solid #b8b8b8;
+    border-radius: 3px;
+    padding: 15px 15px;
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #444444;
 }
 
 .mail label {
     display: block;
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
 }
 
 .mail input {
     display: block;
-    width: 340px;
+    box-sizing: border-box;
+    width: 360px;
+    border: 2px solid #b8b8b8;
+    border-radius: 3px;
+    padding: 15px 15px;
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #444444;
 }
+
+.letter-area label {
+    display: block;
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+.letter-area textarea {
+    box-sizing: border-box;
+    width: 760px;
+    border: 2px solid #b8b8b8;
+    border-radius: 3px;
+    padding: 15px 15px;
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #444444;
+    margin-bottom: 30px;
+}
+
+.feedback .btn {
+    display: block;
+    box-sizing: border-box;
+    width: 260px;
+    padding: 16px 0;
+    line-height: 18px;
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    background: #fb565a;
+    border-radius: 3px;
+}
+
+.feedback .btn:hover {
+    background: #e74246;
+}
+
+/* проблема */
+
+.feedback .btn:active {
+    background: #d7373b;
+    box-shadow: inset 0 3px 0 -1px #c13135;
+}
+
+.modal-content-close {
+    position: absolute;
+    top: 88px;
+    right: 90px;
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+    border: 0;
+    cursor: pointer;
+    background: transparent;
+}
+
+.modal-content-close::before, .modal-content-close::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    width: 22px;
+    height: 5px;
+    background-color: #fb565a;
+    border-radius: 1px;
+    opacity: 1;
+}
+
+.modal-content-close::before {
+    transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+    transform: rotate(-45deg);
+}
+
+/* footer */
 
 .main-footer {
     margin-top: 67px;

@@ -151,7 +151,8 @@
         <a class="btn" href="#">Напишите нам</a>
     </div>
 
-    <div class="popup">
+    <div class="modal-content">
+        <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
         <form class="feedback" action="/echo" method="post">
             <legend>Напишите нам</legend>
             <div class="name">
@@ -160,8 +161,10 @@
             <div class="mail">
                 <label for="mail">Ваш e-mail:</label><input type="text" name="mail" id="mail" value="" placeholder="Для отправки ответа">
             </div>
+            <div class="letter-area">
             <label for="letter">Текст письма:</label>
             <textarea rows="5" name="letter" id="letter" placeholder="В свободной форме"></textarea>
+            </div>
             <button type="submit" class="btn">Отправить</button>
         </form>
     </div>
