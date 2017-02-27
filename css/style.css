@@ -99,7 +99,7 @@ a {
 
 .slider-controls {
     position: absolute;
-    bottom: 95px;
+    bottom: 104px;
     left: 50%;
     width: 200px;
     height: 10px;
@@ -110,11 +110,11 @@ a {
 
 .slider-controls label {
     display: inline-block;
-    width: 4px;
-    height: 4px;
-    margin: 0 3px;
+    width: 6px;
+    height: 6px;
+    margin: 0 6px;
     background: white;
-    border: 3px solid white;
+    border: 6px solid white;
     vertical-align: top;
     border-radius: 50%;
     cursor: pointer;
@@ -350,10 +350,149 @@ a {
 }
 
 .map {
-    overflow: hidden;
+    position: relative;
     background-image: url("../img/map.jpg");
     width: 1440px;
     height: 416px;
+}
+
+.map-address {
+    position: absolute;
+    content: "";
+    top: 55px;
+    left: 140px;
+    box-sizing: border-box;
+    width: 319px;
+    height: 309px;
+    background-color: #ffffff;
+}
+
+.map-address h2 {
+    display: block;
+    width: 220px;
+    margin: 0 auto;
+    padding-top: 49px;
+    padding-bottom: 23px;
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 30px;
+    font-size: 18px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.map-address p {
+    display: block;
+    width: 220px;
+    margin: 0 auto;
+    padding-bottom: 18px;
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+}
+
+.map-address span {
+    display: block;
+    width: 220px;
+    margin: 0 auto;
+    padding-bottom: 37px;
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #666666;
+}
+
+.map-address .btn {
+    display: block;
+    width: 220px;
+    padding: 16px 0;
+    line-height: 18px;
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    background: #fb565a;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+.map-address::before {
+    position: absolute;
+    content: "";
+    top: 34px;
+    left: 681px;
+    background: transparent url("../img/map-marker.png");
+    width: 231px;
+    height: 190px;
+}
+
+.map-address .btn:hover {
+    background: #e74246;
+}
+
+/* проблема */
+
+.map-address .btn:active {
+    background: #d7373b;
+    box-shadow: inset 0 3px 0 -1px #c13135;
+}
+
+.popup {
+    position: absolute;
+    content: "";
+    top: -140px;
+    left: 240px;
+    box-sizing: border-box;
+    width: 960px;
+    height: 590px;
+    background: #ffffff;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.feedback {
+    width: 760px;
+    margin: 0 auto;
+}
+
+.feedback legend {
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 45px;
+    font-size: 45px;
+    font-weight: 500;
+    color: black;
+    margin-top: 80px;
+}
+
+.name,
+.mail {
+   display: inline-block;
+    width: 360px;
+}
+
+.name {
+    margin-right: 35px;
+}
+
+.name label {
+    display: block;
+}
+
+.name input {
+    display: block;
+    width: 340px;
+}
+
+.mail label {
+    display: block;
+}
+
+.mail input {
+    display: block;
+    width: 340px;
 }
 
 .main-footer {
@@ -846,6 +985,7 @@ input[type="checkbox"]:checked + label:hover::before {
 .item:hover {
     cursor: pointer;
     border-color: #4d4d4d;
+    box-shadow: 0 0 6px 0 #aba9a7;
 }
 
 .item::before {
@@ -886,19 +1026,20 @@ input[type="checkbox"]:checked + label:hover::before {
 }
 
 .item-description {
-    display: none;
+    display: block;
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 200px;
-    height: 200px;
+    bottom: 2px;
+    left: 0;
+    width: 360px;
+    height: 230px;
     text-align: center;
-    background: #fff;
+    background: transparent;
+    font-size: 0;
     z-index: 10;
 }
 
 item:hover .item-description {
-    display: block
+    background: white;
 }
 
 .pagination-list {

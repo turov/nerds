@@ -143,8 +143,30 @@
 
 
 <div class="map">
-    <div class="map-address"></div>
+    <div class="map-address">
+        <h2 class="map-titile">Nёrds design studio</h2>
+        <p>191186, Санкт-Петербург,<br>
+        ул. Б. Конюшенная, д. 19/8</p>
+        <span>тел. +7(812) 275-75-75</span>
+        <a class="btn" href="#">Напишите нам</a>
+    </div>
+
+    <div class="popup">
+        <form class="feedback" action="/echo" method="post">
+            <legend>Напишите нам</legend>
+            <div class="name">
+                <label for="name">Ваше имя:</label><input type="text" name="name" id="name" value="" placeholder="Представьтесь, пожалуйста">
+            </div>
+            <div class="mail">
+                <label for="mail">Ваш e-mail:</label><input type="text" name="mail" id="mail" value="" placeholder="Для отправки ответа">
+            </div>
+            <label for="letter">Текст письма:</label>
+            <textarea rows="5" name="letter" id="letter" placeholder="В свободной форме"></textarea>
+            <button type="submit" class="btn">Отправить</button>
+        </form>
+    </div>
 </div>
+
 
 <footer class="main-footer">
     <div class="wrap">
