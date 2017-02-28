@@ -87,7 +87,7 @@ a {
 .slider {
     position: relative;
     width: 1200px;
-    height: 376px;
+    min-height: 411px;
     margin: 0 auto;
     z-index: 1;
 }
@@ -138,8 +138,8 @@ a {
 
 .slide-text {
     width: 380px;
-    padding: 23px 0;
     color: #283136;
+    padding-top: 43px;
 }
 
 .slide-title {
@@ -177,30 +177,25 @@ a {
 
 .slide:nth-child(1) {
     background-image: url("../img/slide1.png");
-    background-repeat: no-repeat;
-    background-position: 93% -37px;
-    padding-bottom: 100px;
-    width: 100%;
+    background-position: 93% -2px;
 }
 
 .slide:nth-child(2) {
     background-image: url("../img/slide2.png");
-    background-repeat: no-repeat;
-    background-position: 100% -54px;
-    padding-bottom: 100px;
-    width: 100%;
+    background-position: 100% -19px;
+
 }
 
 .slide:nth-child(3) {
     background-image: url("../img/slide3.png");
-    background-repeat: no-repeat;
-    background-position: 100% -35px;
-    padding-bottom: 100px;
-    width: 100%;
+    background-position: 100% 0;
 }
 
 .slide {
     display: none;
+    padding-top: 15px;
+    width: 100%;
+    background-repeat: no-repeat;
 }
 
 #btn-1:checked ~ .slides .slide:nth-child(1) {
@@ -447,7 +442,8 @@ a {
     position: absolute;
     content: "";
     top: -140px;
-    left: 240px;
+    left: 50%;
+    transform: translate(-50%, 0);
     box-sizing: border-box;
     width: 960px;
     height: 590px;
@@ -640,13 +636,13 @@ a {
 
 @keyframes shake {
     0%, 100% {
-        transform: translateX(0);
+        transform: translate(-50%, 0);
     }
     10%, 30%, 50%, 70%, 90% {
-        transform: translateX(-10px);
+        transform: translate(-51%, 0);
     }
     20%, 40%, 60%, 80% {
-        transform: translateX(10px);
+        transform: translate(-49%, 0);
     }
 }
 
@@ -656,7 +652,7 @@ a {
 }
 
 .modal-error {
-    animation: shake 0.6s;
+    animation: shake 2s;
 }
 
 /* footer */
@@ -1211,20 +1207,20 @@ input[type="checkbox"]:checked + label:hover::before {
 }
 
 .item-description {
-    display: block;
+    display: none;
     position: absolute;
-    bottom: 2px;
+    bottom: 0;
     left: 0;
     width: 360px;
     height: 230px;
+    box-sizing: border-box;
     text-align: center;
-    background: transparent;
-    font-size: 0;
+    background: #eeeeee;
     z-index: 10;
 }
 
-item:hover .item-description {
-    background: white;
+.item:hover > .item-description {
+    display: block;
 }
 
 .pagination-list {
@@ -1360,7 +1356,7 @@ item:hover .item-description {
 
 .promo {
     background-color: #eeeeee;
-    padding-top: 50px;
+    padding-top: 15px;
     margin-bottom: 80px;
 }
 
