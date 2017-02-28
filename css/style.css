@@ -365,6 +365,7 @@ a {
     width: 319px;
     height: 309px;
     background-color: #ffffff;
+    z-index: 2;
 }
 
 .map-address h2 {
@@ -427,6 +428,7 @@ a {
     background: transparent url("../img/map-marker.png");
     width: 231px;
     height: 190px;
+    z-index: 2;
 }
 
 .map-address .btn:hover {
@@ -1071,14 +1073,32 @@ input[type="checkbox"]:checked + label:hover::before {
     width: 86px;
 }
 
+
 .sort-item a {
     display: block;
+    color: #cccccc;
+}
+
+.sort-item a:hover {
+    color: #999999;
+}
+
+.sort-item a:active {
+    color: #000000;
+}
+
+.sort-item-active a {
+    color: #000000;
+}
+
+.sort-item-active a:hover {
     color: #000000;
 }
 
 .sort-item a:last-child{
     width: 102px;
 }
+
 
 .sort-btn {
     display: inline-block;
