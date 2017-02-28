@@ -11,7 +11,7 @@
 }
 
 body {
-    width: 1440px;
+    width: 100%;
     font-family: "Roboto", Arial, sans-serif;
 }
 
@@ -318,7 +318,6 @@ a {
     border-bottom: none;
 }
 
-
 .logo-one {
     padding-top: 24px;
     padding-left: 31px;
@@ -343,7 +342,6 @@ a {
     padding-right: 30px;
 }
 
-
 .main-footer .wrap {
     display: flex;
     flex-direction: row;
@@ -352,7 +350,7 @@ a {
 .map {
     position: relative;
     background-image: url("../img/map.jpg");
-    width: 1440px;
+    width: 100%;
     height: 416px;
 }
 
@@ -475,7 +473,7 @@ a {
 
 .name,
 .mail {
-   display: inline-block;
+    display: inline-block;
     width: 360px;
 }
 
@@ -567,12 +565,12 @@ a {
     text-decoration: none;
     background: #fb565a;
     border-radius: 3px;
-    outline:0 none;
+    outline: 0 none;
 }
 
 .feedback .btn:hover {
     background: #e74246;
-    outline:0 none;
+    outline: 0 none;
 }
 
 /* проблема */
@@ -580,7 +578,7 @@ a {
 .feedback .btn:active {
     background: #d7373b;
     box-shadow: inset 0 3px 0 -1px #c13135;
-    outline:0 none;
+    outline: 0 none;
 }
 
 .modal-content-close {
@@ -593,11 +591,11 @@ a {
     border: 0;
     cursor: pointer;
     background: transparent;
-    outline:0 none;
+    outline: 0 none;
 }
 
 .modal-content-close:hover, .modal-content-close:active {
-    outline:0 none;
+    outline: 0 none;
 }
 
 .modal-content-close::before, .modal-content-close::after {
@@ -627,7 +625,6 @@ a {
 .modal-content-close::after {
     transform: rotate(-45deg);
 }
-
 
 @keyframes zoomin {
     from {
@@ -1024,12 +1021,12 @@ input[type="checkbox"]:checked + label:hover::before {
     font-family: "Roboto", Arial, sans-serif;
     background: #eeeeee;
     border-radius: 3px;
-    outline:0 none;
+    outline: 0 none;
 }
 
 .filters-group-btn:hover {
     background: #dfdfdf;
-    outline:0 none;
+    outline: 0 none;
 }
 
 /* проблема */
@@ -1037,7 +1034,7 @@ input[type="checkbox"]:checked + label:hover::before {
 .filters-group-btn:active {
     background: #d5d5d5;
     box-shadow: inset 0 3px 0 -1px #bfbfbf;
-    outline:0 none;
+    outline: 0 none;
 }
 
 .sort {
@@ -1073,7 +1070,6 @@ input[type="checkbox"]:checked + label:hover::before {
     width: 86px;
 }
 
-
 .sort-item a {
     display: block;
     color: #cccccc;
@@ -1095,10 +1091,9 @@ input[type="checkbox"]:checked + label:hover::before {
     color: #000000;
 }
 
-.sort-item a:last-child{
+.sort-item a:last-child {
     width: 102px;
 }
-
 
 .sort-btn {
     display: inline-block;
@@ -1384,7 +1379,6 @@ item:hover .item-description {
     padding-top: 10px;
 }
 
-
 .features-description {
     width: 260px;
 }
@@ -1515,7 +1509,6 @@ item:hover .item-description {
     padding: 0;
     margin: 0;
 }
-
 
 .index-info-description li::before {
     position: absolute;
