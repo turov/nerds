@@ -443,6 +443,7 @@ a {
 /* Всплывающая форма */
 
 .modal-content {
+    display: none;
     position: absolute;
     content: "";
     top: -140px;
@@ -553,6 +554,7 @@ a {
 .feedback .btn {
     display: block;
     box-sizing: border-box;
+    border: none;
     width: 260px;
     padding: 16px 0;
     line-height: 18px;
@@ -563,10 +565,12 @@ a {
     text-decoration: none;
     background: #fb565a;
     border-radius: 3px;
+    outline:0 none;
 }
 
 .feedback .btn:hover {
     background: #e74246;
+    outline:0 none;
 }
 
 /* проблема */
@@ -574,18 +578,24 @@ a {
 .feedback .btn:active {
     background: #d7373b;
     box-shadow: inset 0 3px 0 -1px #c13135;
+    outline:0 none;
 }
 
 .modal-content-close {
     position: absolute;
-    top: 88px;
-    right: 90px;
+    top: 90px;
+    right: 93px;
     width: 22px;
     height: 22px;
     font-size: 0;
     border: 0;
     cursor: pointer;
     background: transparent;
+    outline:0 none;
+}
+
+.modal-content-close:hover, .modal-content-close:active {
+    outline:0 none;
 }
 
 .modal-content-close::before, .modal-content-close::after {
@@ -600,12 +610,54 @@ a {
     opacity: 1;
 }
 
+.modal-content-close:hover::before, .modal-content-close:hover::after {
+    background-color: #e74246;
+}
+
+.modal-content-close:active::before, .modal-content-close:active::after {
+    background-color: #d7373b;
+}
+
 .modal-content-close::before {
     transform: rotate(45deg);
 }
 
 .modal-content-close::after {
     transform: rotate(-45deg);
+}
+
+
+@keyframes zoomin {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+.modal-content-show {
+    display: block;
+    animation: zoomin 0.6s;
+}
+
+.modal-error {
+    animation: shake 0.6s;
 }
 
 /* footer */
@@ -970,10 +1022,12 @@ input[type="checkbox"]:checked + label:hover::before {
     font-family: "Roboto", Arial, sans-serif;
     background: #eeeeee;
     border-radius: 3px;
+    outline:0 none;
 }
 
 .filters-group-btn:hover {
     background: #dfdfdf;
+    outline:0 none;
 }
 
 /* проблема */
@@ -981,6 +1035,7 @@ input[type="checkbox"]:checked + label:hover::before {
 .filters-group-btn:active {
     background: #d5d5d5;
     box-shadow: inset 0 3px 0 -1px #bfbfbf;
+    outline:0 none;
 }
 
 .sort {
