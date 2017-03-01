@@ -131,7 +131,7 @@
                     <img src="img/img-sedona.jpg" width="360" height="576"
                                      alt="Sedona">
                     </div>
-                    <div class="item-description item-description-active">
+                    <div class="item-description">
                         <a href="#" class="item-name">Sedona</a>
                         <span class="item-about">Информационный сайт для туристов</span>
                         <a class="btn item-btn">9 900 Руб.</a>
@@ -140,60 +140,60 @@
 
                 <article class="item">
                     <div class="item-img">
-                    <a href="#"><img src="img/img-pink.jpg" width="360" height="576"
-                                     alt="pink"></a>
+                    <img src="img/img-pink.jpg" width="360" height="576"
+                                     alt="pink">
                     </div>
                     <div class="item-description">
-                        <span class="item-name">Pink</span>
-                        <span class="item-about">Cайт</span>
+                        <a href="#" class="item-name">Sedona</a>
+                        <span class="item-about">Информационный сайт для туристов</span>
                         <a class="btn item-btn">9 900 Руб.</a>
                     </div>
                 </article>
 
                 <article class="item">
                     <div class="item-img">
-                    <a href="#"><img src="img/img-barbershop.jpg" width="360" height="576"
-                                     alt="Бербершоп"></a>
+                   <img src="img/img-barbershop.jpg" width="360" height="576"
+                                     alt="Бербершоп">
                     </div>
-                    <div class="item-description item-description-active">
-                        <span class="item-name">Барбершоп</span>
-                        <span class="item-about">Барбершоп "Бородинский"</span>
+                    <div class="item-description">
+                        <a href="#" class="item-name">Sedona</a>
+                        <span class="item-about">Информационный сайт для туристов</span>
                         <a class="btn item-btn">9 900 Руб.</a>
                     </div>
                 </article>
 
                 <article class="item">
                     <div class="item-img">
-                    <a href="#"><img src="img/img-mishka.jpg" width="360" height="576"
-                                     alt="Mishka"></a>
+                    <img src="img/img-mishka.jpg" width="360" height="576"
+                                     alt="Mishka">
                     </div>
-                    <div class="item-description item-description-active">
-                        <span class="item-name">Mishka</span>
-                        <span class="item-about">Интернет магазин</span>
+                    <div class="item-description">
+                        <a href="#" class="item-name">Sedona</a>
+                        <span class="item-about">Информационный сайт для туристов</span>
                         <a class="btn item-btn">9 900 Руб.</a>
                     </div>
                 </article>
 
                 <article class="item">
                     <div class="item-img">
-                    <a href="#"><img src="img/img-aplus.jpg" width="360" height="576"
-                                     alt="Academy"></a>
+                    <img src="img/img-aplus.jpg" width="360" height="576"
+                                     alt="A plus">
                     </div>
-                    <div class="item-description item-description-active">
-                        <span class="item-name">Academy</span>
-                        <span class="item-about">Информационный сайт Академии</span>
+                    <div class="item-description">
+                        <a href="#" class="item-name">Sedona</a>
+                        <span class="item-about">Информационный сайт для туристов</span>
                         <a class="btn item-btn">9 900 Руб.</a>
                     </div>
                 </article>
 
                 <article class="item">
                     <div class="item-img">
-                    <a href="#"><img src="img/img-kvast.jpg" width="360" height="576"
-                                     alt="Кваст"></a>
+                  <img src="img/img-kvast.jpg" width="360" height="576"
+                                     alt="Кваст">
                     </div>
-                    <div class="item-description item-description-active">
-                        <span class="item-name">Кваст</span>
-                        <span class="item-about">Крафтовый квас</span>
+                    <div class="item-description">
+                        <a href="#" class="item-name">Sedona</a>
+                        <span class="item-about">Информационный сайт для туристов</span>
                         <a class="btn item-btn">9 900 Руб.</a>
                     </div>
                 </article>
@@ -212,13 +212,36 @@
 </div>
 
 <div class="map">
+    <!--  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.599104365163!2d30.320894615798533!3d59.938794181876176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1488253773067"
+              width="100%" height="416" style="border:0" allowfullscreen></iframe> -->
     <div class="map-address">
         <h2 class="map-titile">Nёrds design studio</h2>
         <p>191186, Санкт-Петербург,<br>
             ул. Б. Конюшенная, д. 19/8</p>
         <span>тел. +7(812) 275-75-75</span>
-        <a class="btn" href="#">Напишите нам</a>
+        <a class="btn modal-content-btn" href="#">Напишите нам</a>
     </div>
+
+    <div class="modal-content">
+        <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+        <form class="feedback" action="/echo" method="post">
+            <legend>Напишите нам</legend>
+            <div class="name">
+                <label for="name">Ваше имя:</label><input type="text" name="name" id="name" value=""
+                                                          placeholder="Представьтесь, пожалуйста">
+            </div>
+            <div class="mail">
+                <label for="mail">Ваш e-mail:</label><input type="text" name="mail" id="mail" value=""
+                                                            placeholder="Для отправки ответа">
+            </div>
+            <div class="letter-area">
+                <label for="letter">Текст письма:</label>
+                <textarea rows="5" name="letter" id="letter" placeholder="В свободной форме"></textarea>
+            </div>
+            <button type="submit" class="btn">Отправить</button>
+        </form>
+    </div>
+
 </div>
 
 <footer class="main-footer">
@@ -235,5 +258,6 @@
     </div>
 </footer>
 
+<script src="js/script.js"></script>
 </body>
 </html>
